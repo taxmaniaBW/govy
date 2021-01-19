@@ -41,3 +41,5 @@ app.*.map.json
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+angular-rhythm-302109-349dd6c953df.json
