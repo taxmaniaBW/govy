@@ -312,8 +312,12 @@ class VehicleRegistrationState extends State<VehicleRegistrationScreen> {
       context,
       textToBeDisplayed: 'Registering Vehicle...',
     );
-    var url = 'https://api.govapp.co.bw//api/vehicles/add';
-    var response = await http.post(url, body: {
+
+    var url = 'https://api.govapp.co.bw/api/vehicles/add';
+    var response = await http.post(url, headers: <String, String>{
+      'x-access-token':
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDVhMWQyMDRkMWY1MzcxYjBhZjYwNSIsImlhdCI6MTYxMTA3Nzk5MSwiZXhwIjoxNjExMTY0MzkxfQ.LqnXeA_Ap4ki4fwzA_j7RFM-yUBweuZFfzLsIkdMxwo"
+    }, body: {
       "name": fullName.text,
       "postalAddress": postalAddress.text,
       "physicalAddress": physicalAddress.text,

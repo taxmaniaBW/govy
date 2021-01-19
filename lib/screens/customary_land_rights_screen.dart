@@ -176,7 +176,7 @@ class CustomaryLandState extends State<CustomaryLandScreen> {
     );
     var url = 'https://api.govapp.co.bw/api/landapplication/new';
     var response = await http.post(url, headers: <String, String>{
-      'accessToken':
+      'x-access-token':
           'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDVhMWQyMDRkMWY1MzcxYjBhZjYwNSIsImlhdCI6MTYxMTA2NzgxNiwiZXhwIjoxNjExMTU0MjE2fQ.XkDuaBc6ef9JoynYgFOYqS2_hvO-XZKI5hHRHUHVzDg',
     }, body: {
       "fullNames": name.text,
