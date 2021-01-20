@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:govy/consttants.dart';
 import 'package:http/http.dart' as http;
 
-class CustomaryLandScreen extends StatefulWidget {
+class CommonLandRightsScreen extends StatefulWidget {
   final bool citizen = false;
   final String gender = "";
   @override
-  State<StatefulWidget> createState() => CustomaryLandState();
+  State<StatefulWidget> createState() => CommonLandRightsState();
 }
 
-class CustomaryLandState extends State<CustomaryLandScreen> {
+class CommonLandRightsState extends State<CommonLandRightsScreen> {
   ProgressDialog _progressDialog = ProgressDialog();
   String vehicleType = "";
   TextEditingController name = TextEditingController();
@@ -150,7 +150,7 @@ class CustomaryLandState extends State<CustomaryLandScreen> {
             color: colorPrimary,
           ),
           title: Text(
-            "Customary Land Rights Application",
+            "Common Land Rights Application",
             style: TextStyle(
                 fontFamily: 'Avenir',
                 color: colorPrimary,
@@ -174,7 +174,7 @@ class CustomaryLandState extends State<CustomaryLandScreen> {
       context,
       textToBeDisplayed: 'Submitting Application...',
     );
-    var url = 'https://api.govapp.co.bw/api/landapplication/new';
+    var url = 'https://api.govapp.co.bw/api/customarylandapp/new';
     var response = await http.post(url, headers: <String, String>{
       'x-access-token':
           'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDVhMWQyMDRkMWY1MzcxYjBhZjYwNSIsImlhdCI6MTYxMTA2NzgxNiwiZXhwIjoxNjExMTU0MjE2fQ.XkDuaBc6ef9JoynYgFOYqS2_hvO-XZKI5hHRHUHVzDg',

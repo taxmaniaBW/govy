@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:govy/screens/common_law_rights_screen.dart';
 import 'package:govy/screens/customary_land_rights_screen.dart';
 import 'package:govy/screens/vehicle_registration.dart';
 
@@ -13,12 +14,12 @@ class ServicesScreenState extends State<ServicesScreen> {
   List<String> services = [
     "Vehicle Registration",
     "Customary Law Land Rights",
+    "Common Law Land Rights",
     "Plant Import Permit",
     "Internship",
     "Driving License",
     "Baits Access",
     "DVS_VMP",
-    "Common Law Land Rights",
   ];
 
   void goToService(index) {
@@ -32,6 +33,10 @@ class ServicesScreenState extends State<ServicesScreen> {
       case 1:
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => CustomaryLandScreen()));
+        break;
+      case 2:
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => CommonLandRightsScreen()));
     }
   }
 
